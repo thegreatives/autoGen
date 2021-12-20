@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>{title} 分类展示 </title>
+  <meta name="keywords" content="{keywords}" />
+  <meta name="description" content="{description}" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="shortcut icon" href="/statics/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/statics/font/iconfont.css" type="text/css" />
+  <link rel="stylesheet" href="/statics/css/stui_block.css" type="text/css" />
+  <link rel="stylesheet" href="/statics/css/stui_block_color.css" type="text/css" />
+  <link rel="stylesheet" href="/statics/css/stui_default.css" type="text/css" />
+  <script type="text/javascript" src="/statics/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/statics/js/stui_default.js"></script>
+  <script type="text/javascript" src="/statics/js/stui_block.js"></script>
+  <script type="text/javascript" src="/statics/js/home.js"></script>
+  <script>var maccms={"path":"","mid":"1","url":"scmyzm.com","wapurl":"scmyzm.com","mob_status":"0"};</script>
+ </head>
+ <body>
+ {script}
+  <header class="stui-header__top clearfix">
+   <div class="stui-header__bar clearfix">
+    <div class="container">
+     <div class="row">
+      <div class="stui-header__logo">
+       <a class="logo" href="/"></a>
+      </div>
+      <div class="stui-header__search">
+       <script type="text/javascript" src="/statics/js/jquery.autocomplete.js"></script>
+       <form id="search" name="search" method="get" action="{flink}" onsubmit="return qrsearch();" autocomplete="off">
+        <input type="text" id="wd" name="wd" class="mac_wd form-control" value="" placeholder="请输入关键词..." />
+        <button class="submit" id="searchbutton" type="submit" name="submit"><i class="icon iconfont icon-search"></i></button>
+       </form>
+      </div>
+      <ul class="stui-header__user">
+       <li><a href="javascript:;"><i class="icon iconfont icon-clock"></i><span class="hidden-xs">播放记录</span></a>
+        <div class="dropdown history">
+         <h5 class="margin-0 text-muted"><a class="historyclean text-muted pull-right" href="">清空</a>播放记录</h5>
+         <ul class="clearfix" id="stui_history"></ul>
+        </div></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="stui-header__menu clearfix">
+    <div class="container">
+     <div class="row">
+      <span class="more hidden-xs">今日更新“{randint 100 300}”部影片</span>
+      <ul class="type-slide clearfix">
+       <li class=""><a href="/">首页</a></li>
+       <li class=""><a href="{flink}" title="{bk}">{bk}</a></li>
+       <li class=""><a href="{flink}" title="{bk}">{bk}</a></li>
+       <li class=""><a href="{flink}" title="{bk}">{bk}</a></li>
+       <li class=""><a href="{flink}" title="{bk}">{bk}</a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </header>
+  <script type="text/javascript">$(".stui-header__user li,.stui-header__menu li").click(function(){$(this).find(".dropdown").toggle();if(!stui.browser.useragent.mobile){$(".MacPlayer").toggle();}});</script>
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-wide-8 col-xs-1 padding-0">
+     <div class="stui-pannel stui-pannel-bg clearfix">
+      <div class="stui-pannel-box">
+       <div class="stui-pannel_hd">
+        <ul class="stui-screen__list type-slide bottom-line-dot clearfix">
+         <li class=""><span class="text-muted">按剧情</span></li>
+         <li class=""><a href="{flink}">喜剧</a></li>
+         <li class=""><a href="{flink}">爱情</a></li>
+         <li class=""><a href="{flink}">恐怖</a></li>
+         <li class=""><a href="{flink}">动作</a></li>
+         <li class=""><a href="{flink}">科幻</a></li>
+         <li class=""><a href="{flink}">剧情</a></li>
+         <li class=""><a href="{flink}">战争</a></li>
+         <li class=""><a href="{flink}">警匪</a></li>
+         <li class=""><a href="{flink}">犯罪</a></li>
+         <li class=""><a href="{flink}">动画</a></li>
+         <li class=""><a href="{flink}">奇幻</a></li>
+         <li class=""><a href="{flink}">武侠</a></li>
+         <li class=""><a href="{flink}">冒险</a></li>
+         <li class=""><a class="hide" href="{flink}">枪战</a></li>
+         <li class=""><a class="hide" href="{flink}">恐怖</a></li>
+         <li class=""><a class="hide" href="{flink}">悬疑</a></li>
+         <li class=""><a class="hide" href="{flink}">惊悚</a></li>
+         <li class=""><a class="hide" href="{flink}">经典</a></li>
+         <li class=""><a class="hide" href="{flink}">青春</a></li>
+         <li class=""><a class="hide" href="{flink}">文艺</a></li>
+         <li class=""><a class="hide" href="{flink}">微电影</a></li>
+         <li class=""><a class="hide" href="{flink}">古装</a></li>
+         <li class=""><a class="hide" href="{flink}">历史</a></li>
+         <li class=""><a class="hide" href="{flink}">运动</a></li>
+         <li class=""><a class="hide" href="{flink}">农村</a></li>
+         <li class=""><a class="hide" href="{flink}">儿童</a></li>
+         <li class=""><a class="hide" href="{flink}">网络电影</a></li>
+        </ul>
+        <ul class="stui-screen__list type-slide bottom-line-dot clearfix">
+         <li class=""><span class="text-muted">按地区</span></li>
+         <li class=""><a href="{flink}">大陆</a></li>
+         <li class=""><a href="{flink}">香港</a></li>
+         <li class=""><a href="{flink}">台湾</a></li>
+         <li class=""><a href="{flink}">美国</a></li>
+         <li class=""><a href="{flink}">法国</a></li>
+         <li class=""><a href="{flink}">英国</a></li>
+         <li class=""><a href="{flink}">日本</a></li>
+         <li class=""><a href="{flink}">韩国</a></li>
+         <li class=""><a href="{flink}">德国</a></li>
+         <li class=""><a href="{flink}">泰国</a></li>
+         <li class=""><a href="{flink}">印度</a></li>
+         <li class=""><a href="{flink}">意大利</a></li>
+         <li class=""><a href="{flink}">西班牙</a></li>
+         <li class=""><a class="hide" href="{flink}">加拿大</a></li>
+         <li class=""><a class="hide" href="{flink}">其他</a></li>
+        </ul>
+        <ul class="stui-screen__list type-slide clearfix">
+         <li class=""><span class="text-muted">按年份</span></li>
+         <li class=""><a href="{flink}">2021</a></li>
+         <li class=""><a href="{flink}">2020</a></li>
+         <li class=""><a href="{flink}">2019</a></li>
+         <li class=""><a href="{flink}">2018</a></li>
+         <li class=""><a href="{flink}">2017</a></li>
+         <li class=""><a href="{flink}">2016</a></li>
+         <li class=""><a href="{flink}">2015</a></li>
+         <li class=""><a href="{flink}">2014</a></li>
+         <li class=""><a href="{flink}">2013</a></li>
+         <li class=""><a href="{flink}">2012</a></li>
+         <li class=""><a href="{flink}">2011</a></li>
+         <li class=""><a href="{flink}">2010</a></li>
+        </ul>
+       </div>
+       <div class="stui-pannel_bd">
+        <ul class="stui-vodlist clearfix">
+         {randloop 30}
+         <li class="col-md-5 col-sm-4 col-xs-3">
+          <div class="stui-vodlist__box">
+           <a class="stui-vodlist__thumb lazyload" href="{dlink}" title="{bk}" data-original="{pic}"><span class="play hidden-xs"></span><span class="pic-text text-right">更新至{randint 3 70}集</span></a><div class="stui-vodlist__detail"><h4 class="title text-overflow"><a href="{dlink}" title="{bk}">{bk}</a></h4>
+           <p class="text text-overflow text-muted hidden-xs">{bk},{hk}</p>
+           </div>
+          </div></li>
+         {/randloop}
+        </ul>
+       </div>
+      </div>
+     </div>
+     <ul class="stui-page text-center clearfix">
+      <li ><a href="{flink}">首页</a></li>
+      <li ><a href="{flink}">上一页</a></li>
+      <li class="hidden-xs active"><a href="{flink}">1</a></li>
+      <li class="hidden-xs"><a href="{flink}">2</a></li>
+      <li class="active visible-xs"><span class="num">1/2</span></li>
+      <li ><a href="{flink}">下一页</a></li>
+      <li ><a href="{flink}">尾页</a></li>
+     </ul>
+    </div>
+    <div class="col-lg-wide-2 col-xs-1 stui-pannel-side visible-lg">
+     <div class="stui-pannel stui-pannel-bg clearfix">
+      <div class="col-pd clearfix">
+       <div class="stui-pannel_hd">
+        <div class="stui-pannel__head bottom-line active clearfix">
+         <h3 class="title">本周热门</h3>
+        </div>
+       </div>
+       <div class="stui-pannel_bd">
+        <ul class="stui-vodlist__media active col-pd clearfix">
+         {randloop 10}
+         <li class="top-line-dot">
+          <div class="thumb">
+           <a class="stui-vodlist__thumb" href="{dlink}" title="{bk}" style="width: 33.5px; background-image: url({pic});"></a></div><div class="detail detail-side" style="padding-top: 5px;"><p class="margin-0"><a href="{dlink}">{bk}</a></p>
+           <div class="score">
+            <div class="star"><span class="star-cur" id="score"></span></div>
+            <span class="branch">{randint 1 10}.0</span>
+           </div>
+          </div></li>
+         {/randloop}
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="stui-pannel stui-pannel-bg clearfix">
+      <div class="col-pd clearfix">
+       <div class="stui-pannel_hd">
+        <div class="stui-pannel__head bottom-line active clearfix">
+         <h3 class="title">最新更新</h3>
+        </div>
+       </div>
+       <div class="stui-pannel_bd">
+        <ul class="stui-vodlist__media active col-pd clearfix">
+         {randloop 10}
+         <li class="top-line-dot">
+          <div class="thumb">
+           <a class="stui-vodlist__thumb" href="{dlink}" title="{bk}" style="width: 33.5px; background-image: url({pic});"></a></div><div class="detail detail-side" style="padding-top: 5px;"><p class="margin-0"><a href="{dlink}">{bk}</a></p>
+          <div class="score">
+           <div class="star"><span class="star-cur" id="score"></span></div>
+           <span class="branch">{randint 1 10}.0</span>
+          </div>
+         </div></li>
+         {/randloop}
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="row">
+    <div class="stui-foot clearfix">
+     <div class="col-pd text-center hidden-xs">
+      Copyright
+      <span class="fontArial"></span> 2021-2031 scmyzm.com Inc. All Rights Reserved.
+      <a href="/" target="_blank">[简色网]</a>
+      <br />联系邮箱：
+      <a href="mailto:ajianwork123@gmail.com">ajianwork123@gmail.com</a>
+     </div>
+     <p class="share bdsharebuttonbox text-center margin-0 hidden-sm hidden-xs"></p>
+     <p class="text-center hidden-xs"><a href="/"><img src="/statics/img/logo_max.png" width="150" height="48" /></a></p>
+     <p class="text-muted text-center visible-xs">Copyright &copy; 2021-2031</p>
+    </div>
+   </div>
+  </div>
+  <ul class="stui-extra clearfix">
+   <li><a class="backtop" href="javascript:scroll(0,0)" style="display: none;"><i class="icon iconfont icon-less"></i></a></li>
+   <li class="hidden-xs"><a class="copylink" href="javascript:;"><i class="icon iconfont icon-share"></i></a></li>
+   <li class="visible-xs"><a class="open-share" href="javascript:;"><i class="icon iconfont icon-share"></i></a></li>
+  </ul>
+  <div class="hide">
+   {tj}
+  </div>
+  <script type="text/javascript"> $(".score").each(function(){var star = $(this).find(".branch").text().replace(".","0.");$(this).find("#score").css("width",""+star+"%");});</script>
+ </body>
+</html>
