@@ -1,0 +1,24 @@
+
+
+head
+title  标题
+keywords 关键词
+description 描述
+script  脚本
+
+
+flink      分类url
+dlink      详情页url
+plink      播放页url
+kp         关键词段落
+bk         正规关键词
+hk         不正规关键词
+pic        图片链接
+today      今天月日【10-2】
+date       日期 【2021-10-1】
+time       当前时间【09:51】
+datetime   日期时间【2021-10-2 09:41】
+tj         统计
+randloop   随机循环次数
+i          randloop 里面的次数
+randint    随机一个范围数区间
